@@ -14,8 +14,10 @@ Autoencoder는 레이블이 없는 데이터 x에서 feature vector를 학습하
 이미지를 처리하기 위해 Encoder와 Decoder가 CNN으로 구성된 CNN Autoencoder를 사용함
 ### Autoencoder를 이용한 이상치 탐지
 ![image](https://user-images.githubusercontent.com/67357059/146855466-0cdbb77a-fa32-4c1a-9e68-324691f1d45d.png)
+
 AutoEncoder를 사용하면 데이터에 레이블이 붙이지 않고도 비정상 데이터를 탐지할 수 있음. 정상 및 비정상 이미지는 다음과 같이 훈련됨.
 - 훈련 과정에서는 정상 데이터만 사용되며 autoencoder의 출력은 input이미지와 최대한 비슷하게 출력되도록 학습됨.
 - Test 과정에서 비정상 데이터가 추가되면 autoencoder의 출력이 정상 데이터처럼 복원됨. 따라서 input과 output의 차이가 커져 이상치 탐지가 가능하게 됨.
+- 
 ![image](https://user-images.githubusercontent.com/67357059/146855836-3b2964fd-b0fd-4150-86d7-472ac649f5cf.png)
 
