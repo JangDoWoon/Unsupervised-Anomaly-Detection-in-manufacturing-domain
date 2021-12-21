@@ -11,4 +11,7 @@ MVtec-ad는 산업 검사에 중점을 둔 이상치 탐지 방법을 위한 데
 Autoencoder는 레이블이 없는 데이터 x에서 feature vector를 학습하기 위한 unsupervised learning방법임. 이는 재구성된 input을 생성하는 데 사용할 수도 있으며, 다음 두 단계로 이루어짐.
 - Encoder: Input에 대해서 feature vector를 생성함
 - Decoder: 파생된 식에서 원래 input 값을 되찾음
-- 
+이미지를 처리하기 위해 Encoder와 Decoder가 CNN으로 구성된 CNN Autoencoder를 사용함
+### Autoencoder를 이용한 이상치 탐지
+![image](https://user-images.githubusercontent.com/67357059/146855466-0cdbb77a-fa32-4c1a-9e68-324691f1d45d.png)
+
