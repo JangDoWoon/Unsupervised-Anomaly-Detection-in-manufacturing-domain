@@ -7,3 +7,6 @@ MVtec-ad는 산업 검사에 중점을 둔 이상치 탐지 방법을 위한 데
 
 ![image](https://user-images.githubusercontent.com/67357059/146854209-9474d22a-b6d5-46a4-8d0e-9b6dfa5630c8.png)
 ## Autoencoder를 이용한 이상치 탐지
+### Autoencoder란?
+Autoencoder는 레이블이 없는 데이터 x에서 feature vector를 학습하기 위한 unsupervised learning방법임. 이는 재구성된 input을 생성하는 데 사용할 수도 있으며, 다음 두 단계로 이루어짐.
+(1) Encoder
