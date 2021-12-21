@@ -18,6 +18,26 @@ Autoencoder는 레이블이 없는 데이터 x에서 feature vector를 학습하
 AutoEncoder를 사용하면 데이터에 레이블이 붙이지 않고도 비정상 데이터를 탐지할 수 있음. 정상 및 비정상 이미지는 다음과 같이 훈련됨.
 - 훈련 과정에서는 정상 데이터만 사용되며 autoencoder의 출력은 input이미지와 최대한 비슷하게 출력되도록 학습됨.
 - Test 과정에서 비정상 데이터가 추가되면 autoencoder의 출력이 정상 데이터처럼 복원됨. 따라서 input과 output의 차이가 커져 이상치 탐지가 가능하게 됨.
-- 
+
 ![image](https://user-images.githubusercontent.com/67357059/146855836-3b2964fd-b0fd-4150-86d7-472ac649f5cf.png)
+
+### Training 세팅
+![image](https://user-images.githubusercontent.com/67357059/146855952-6c0e4c04-3412-459a-ae88-c1df87cb2051.png)
+
+### 결과
+Autoencoder기반 이상치 탐지 모델은 실제 이미지와 생성된 이미지의 차이를 사용하여 수행됨. Bottle의 결과에서 그들은 정상적인 데이터를 잘 생성한다는 것을 보여주며, 실제 이미지와 크게 깨진 이미지, 작게 깨진 이미지, 그리고 오염에서 생성된 이미지의 차이를 명확하게 식별할 수 있었음.
+
+![image](https://user-images.githubusercontent.com/67357059/146856373-f0ce38e5-779e-4fb1-89c9-44130468c894.png)
+
+또한, bottle의 ROC-AUC와 PR-AUC는 각각 0.846, 0.942임.
+
+![image](https://user-images.githubusercontent.com/67357059/146856560-e70c8b66-95af-41dc-8551-cc9ed8e69861.png)
+
+## 참조
+* Kramer et al, "Nonlinear principal component analysis using autoassociative neural networks," AIChE Journal (1991)
+* Paul Bergmann et al,  "Improving Unsupervised Defect Segmentation by Applying Structural Similarity To Autoencoders "  arXiv (2019)
+* Bergmann, P., Fauser, M., Sattlegger, D., & Steger, C. (2019). MVTec AD--A comprehensive real-world dataset for unsupervised anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 9592-9600). 
+
+
+
 
